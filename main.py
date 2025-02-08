@@ -128,9 +128,9 @@ def main():
             event_a = input("Enter the name of the first event (must happen first): ")
             event_b = input("Enter the name of the second event (depends on the first): ")
             if event_a in [e.name for e in event_list] and event_b in [e.name for e in event_list]:
-                event_graph.add_dependency(event_a, event_b)
-                print(f"Dependency added: {event_a} -> {event_b}")
-                log_action(f"Added dependency: {event_a} -> {event_b}")
+                event_graph.add_dependency(event_b, event_a)
+                print(f"Dependency added: {event_b} -> {event_a}")
+                log_action(f"Added dependency: {event_b} -> {event_a}")
             else:
                 print("One or both events not found.")
 
