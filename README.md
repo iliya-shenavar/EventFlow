@@ -1,19 +1,23 @@
 # EventFlow
 
-# EventFlow
-
 ## 📌 Overview
-EventFlow is an advanced event management system that efficiently handles **scheduling, prioritization, dependency management, and participant tracking** using optimized **data structures** such as **heaps, graphs, hash tables, and binary trees**.
+EventFlow is an advanced event management system that leverages **optimized data structures** such as **heap, graph, hash table, and binary tree** to facilitate **scheduling, prioritization, dependency management, and participant tracking**.
 
 ## 🔥 Features
-- **Event Prioritization**: Uses a **MinHeap** for managing event priority.
-- **Dependency Management**: Implements a **Directed Graph** to track event dependencies.
-- **Cycle Detection**: Prevents circular dependencies in event execution.
-- **Participant Tracking**: Uses a **Hash Table** for storing event participants.
-- **Event Categorization**: Implements a **Binary Tree** for organizing events by date, participants, and instructor.
-- **Event Execution & Notification**: Ensures structured execution of events and notifies participants.
-- **Rating System**: Allows rating of events and instructors.
-- **Persistence**: Stores event data in a JSON file for future access.
+- **Add New Event**: Register an event with **name, date, priority, and instructor**.
+- **Event Prioritization**: Uses **MinHeap** to manage event execution based on priority.
+- **Dependency Management**: Implements a **directed graph** to track event dependencies and prevent incorrect execution.
+- **Cycle Detection**: Prevents circular dependencies in event execution using a **graph cycle detection algorithm**.
+- **View and Execute Next Event**: Retrieves the next event based on **priority and time** and executes it when conditions are met.
+- **Remove Events**: Enables deleting scheduled events from the system.
+- **Participant Management**: Uses a **hash table** to store and track event participants.
+- **Search Events by Name**: Allows finding a specific event in the system.
+- **Event Categorization**: Implements a **binary tree** to organize events based on **date, number of participants, and instructor**.
+- **Notify Participants**: Sends notifications to registered participants of each event.
+- **Check Event Overlaps**: Identifies events scheduled on the same date.
+- **Categorize Events by Status**: Displays lists of **upcoming, ongoing, and completed** events.
+- **Rate Events and Instructors**: Enables rating events and instructors on a scale from **1 to 5**.
+- **Data Persistence**: Stores event data in a **JSON file** for future use.
 
 ## 📂 Technologies Used
 - **Programming Language**: Python 🐍
@@ -21,31 +25,27 @@ EventFlow is an advanced event management system that efficiently handles **sche
 
 ## 🚀 Getting Started
 ### 1️⃣ Installation
-Make sure you have **Python 3.x** installed.
+Ensure **Python 3.x** is installed on your system.
 
-### 2️⃣ Running the Application
+### 2️⃣ Run the Application
 ```sh
 python main.py
 ```
 
 ## 👨‍💻 Code Structure
 - `event.py` – Defines the **Event** class.
-- `heap.py` – Implements a **MinHeap** for event prioritization.
+- `heap.py` – Implements **MinHeap** for event prioritization.
 - `graph.py` – Implements a **Directed Graph** for dependency tracking.
 - `hash_table.py` – Implements a **Hash Table** for participant management.
 - `tree.py` – Implements a **Binary Tree** for event categorization.
-- `main.py` – The **core script** for interacting with the system.
+- `main.py` – **Main script** for system interaction.
 
 ## 🎯 Usage
-- Add, execute, and manage events.
-- Track dependencies between events.
-- Categorize events based on different criteria.
-- Rate events and instructors.
-- Persist event data for future use.
-
-## 💡 Contribution
-Feel free to fork the repository, submit issues, and contribute to improving **EventFlow**! 🚀
-
-## 📜 License
-This project is licensed under the **MIT License**.
+- **Add, view, remove, and execute events.**
+- **Track dependencies between events.**
+- **Categorize events by date, participants, and instructor.**
+- **Detect overlapping events.**
+- **Rate events and instructors.**
+- **Notify event participants.**
+- **Persist event data for future use.**
 
